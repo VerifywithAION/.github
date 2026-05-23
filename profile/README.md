@@ -31,6 +31,30 @@ AEGIS exists to answer that question before harm occurs.
 
 ---
 
+## The execution firewall
+
+Traditional firewalls inspect network traffic before it crosses a boundary.
+
+AION inspects **execution intent** before it crosses a consequence boundary.
+
+It asks:
+
+- What is trying to execute?
+- Who or what requested it?
+- What authority does it use?
+- What consequence could follow?
+- Which policy applies?
+- Should this be allowed, warned, or blocked?
+- What receipt proves the decision?
+
+Network Firewall:
+Packet -> Inspect -> Policy -> Allow / Deny -> Log
+
+AION Execution Firewall:
+Intent -> Preview -> Policy -> Allow / Warn / Block -> Receipt
+
+---
+
 ## The execution problem
 
 Autonomous systems are gaining execution authority faster than their governance layers are maturing.
@@ -52,7 +76,6 @@ AION treats execution as a governed event, not a blind command.
 
 ## The AEGIS primitive
 
-```text
 Intent
   -> Preview
   -> Consequence Modeling
@@ -60,7 +83,6 @@ Intent
   -> ALLOW / WARN / BLOCK
   -> Receipt
   -> Execution Gate
-```
 
 No meaningful execution should happen before the system can explain consequence, apply policy, and produce evidence.
 
@@ -103,14 +125,13 @@ Powered by **AION Governance OS**.
 
 Wallet Guard is the first consumer-facing AEGIS product: wallet execution safety before approval, signing, or irreversible consequence.
 
-```text
 Connect wallet
   -> Inspect session
   -> Preview consequence
   -> Apply policy profile
   -> ALLOW / WARN / BLOCK
   -> Generate receipt
-```
+
 
 ---
 
@@ -187,6 +208,8 @@ That means the system asks:
 **AION Governance OS:** the runtime layer for policy, preview, receipts, and governed execution.
 
 **Wallet Guard:** protects users before dangerous wallet actions are signed.
+
+**AION Execution Firewall:** an execution firewall for autonomous systems.
 
 ---
 
